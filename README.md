@@ -1,6 +1,6 @@
 # FormCraft — AI-powered fullstack form builder that exports working React components
 
-Not deployed — runs locally
+Live demo: [FormCraft](https://www.formcraft.uk/) &nbsp;
 
 ## What this is
 
