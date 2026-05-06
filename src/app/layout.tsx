@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { outfit, plusJakartaSans, jetbrainsMono } from '@/lib/fonts';
 import { StoreProvider } from '@/components/providers/StoreProvider';
 import { AuthProvider } from '@/components/providers/AuthProvider';
+import { Analytics } from '@vercel/analytics/next';
 import { Toaster } from 'sonner';
 import './globals.css';
 
@@ -130,6 +131,7 @@ export default function RootLayout({
             />
           </AuthProvider>
         </StoreProvider>
+        <Analytics />
       </body>
     </html>
   );
