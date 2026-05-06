@@ -5,8 +5,10 @@ import { AuthProvider } from '@/components/providers/AuthProvider';
 import { Toaster } from 'sonner';
 import './globals.css';
 
-const BASE_URL = 'https://formcraft.app';
-const TITLE = 'FormCraft — Professional Form Builder';
+const BASE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
+const TITLE = 'FormCraft — Drag and Drop Form Builder';
 const DESCRIPTION =
   'Build professional forms with drag-and-drop fields, AI generation, conditional logic, and export to clean React Hook Form code.';
 
@@ -40,7 +42,7 @@ export const metadata: Metadata = {
         url: '/seo-preview-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'FormCraft — Professional Form Builder',
+        alt: 'FormCraft — Drag and Drop Form Builder',
       },
     ],
   },

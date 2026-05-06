@@ -9,8 +9,8 @@ import { selectField } from '@/store/slices/uiSlice';
 import { FormBuilder } from '@/components/layout/FormBuilder';
 
 export default function BuilderClient() {
-  const params   = useParams();
-  const router   = useRouter();
+  const params = useParams();
+  const router = useRouter();
   const dispatch = useAppDispatch();
 
   const formId = typeof params.formId === 'string' ? params.formId : '';
@@ -23,7 +23,7 @@ export default function BuilderClient() {
     if (!form?.title) return;
     const label = form.title.trim() || 'Untitled Form';
     document.title = `${label} — FormCraft`;
-    return () => { document.title = 'FormCraft — Professional Form Builder'; };
+    return () => { document.title = 'FormCraft — Drag and Drop Form Builder'; };
   }, [form?.title]);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export default function BuilderClient() {
       dispatch(selectField(null));
       dispatch(clearActiveForm());
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [formId]);
 
   if (!formExists) return null;

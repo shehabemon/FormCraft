@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'FormCraft — Professional Form Builder',
+    name: 'FormCraft — Drag and Drop Form Builder',
     short_name: 'FormCraft',
     description: 'Build professional forms with drag-and-drop, AI generation, conditional logic, and React code export.',
     start_url: '/',
